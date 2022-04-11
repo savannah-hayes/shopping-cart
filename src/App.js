@@ -3,10 +3,12 @@ import { Provider } from "react-redux";
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 
 import products from "reducers/products";
-import Cart from "components/Cart"
+import cart from "./reducers/cart";
 import Products from "components/Products";
+import Cart from "components/Cart";
 
 const reducer = combineReducers({
+  cart: cart.reducer,
   products: products.reducer
 });
 
